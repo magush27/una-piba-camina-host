@@ -1,0 +1,80 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* If the screen size is 601px or more, set the font-size of <div> to 80px */
+@media only screen and (min-width: 601px) {
+   html {
+      font-size: 2em;
+    }
+  }
+  
+  /* If the screen size is 600px or less, set the font-size of <div> to 30px */
+  @media only screen and (max-width: 600px) {
+   html {
+      font-size: 1.2em;
+    }
+    tw-story {
+      padding: 3em 5%;
+      line-height: 1.5em;
+    }
+  }
+
+body {
+    background: linear-gradient(0deg, rgba(34,51,195,1) 0%, rgba(0,0,0,1) 16%, rgba(0,0,0,1) 100%);
+    background-attachment: fixed;
+}
+
+canvas {
+    width: 100% !important;
+    height: 100% !important;
+    position: fixed;
+    z-index: 1;
+  }
+
+  tw-story{
+    position: relative;
+    z-index: 2;
+    line-height: 1.5em;
+  }
+
+  #barrilRadioactivo {
+    width: 160px;
+    height: 144px;
+    background-image: url(img/barrilsprite.png);
+    background-size: auto 100%;
+    position: fixed;
+    left: 50%;
+    bottom: -1%;
+    transform: translate(-50%, -30%);
+    margin: 0 auto;
+  }
+  
+      #barrilRadioactivo:hover{
+        width: 160px;
+        height: 144px;
+        background-image: url(img/barrilsprite.png);
+        animation: playX 1s steps(4) infinite,
+             playY 1s steps(1) infinite;
+                   }
+        @keyframes playX {
+      from {background-position-x: 0px;}
+      to {background-position-x:-137%;}
+    }
+  
+    @keyframes playY {
+      from {background-position-y: 0px;}
+      to {background-position-y:-100%;}
+    }
+
+
+    #lista{
+     
+      text-align: center;
+    }
+  
+ul{
+  list-style-type: none;
+}
+     
+  
